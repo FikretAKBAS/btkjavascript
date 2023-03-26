@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript" language="javascript">
+      // if       = Eğer
+      // else if  = Değilse Eğer
+      // else     = Değilse
+
+      /*
+      if ( Koşul/ Koşullar) {
+
+                ifade / İfadeler
+
+      } else if (Koşul/ Koşullar) {
+
+                ifade / İfadeler
+
+      } else {
+
+                ifade / İfadeler
+
+      }
+      */
+
+      var saat = 8;
+      var verituru = typeof saat;
+      if (saat >= 0 && saat <= 5) {
+        document.write("İyi Geceler");
+      } else if (saat > 5 && saat <= 9) {
+        document.write("Günaydın Kardeş");
+      } else if (saat > 9 && saat <= 16) {
+        document.write("İyi Günler");
+      } else if (saat > 16 && saat <= 23) {
+        document.write("İyi Akşamlar");
+      } else if (saat > 23) {
+        document.write("Çok Büyük Bir Değer Girdiniz.");
+      } else if (verituru == "string") {
+        document.write("Değer Rakamsal Olmalıdır.");
+      } else {
+        document.write("Error");
+      }
+    </script>
+  </body>
+</html>
