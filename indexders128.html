@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript" language="javascript">
+      /*
+        1st parameter   : Variable
+        2nd parameter   : array or object
+
+        for (1st parameter in 2nd parameter) {
+
+        }
+        */
+
+      var ornek = { isim: "Fikret", soyisim: "Akbaş", birthDate: "15.09.1993" };
+      document.write(ornek + "<br/> <br/>");
+      var sonuc;
+      for (sonuc in ornek) {
+        document.write(ornek[sonuc] + "<br/>");
+      }
+    </script>
+  </body>
+</html>
