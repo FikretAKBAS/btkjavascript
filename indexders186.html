@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript" language="javascript">
+      // reduceRight() : Kendisine parametre olarak verilen fonksiyonu dizideki her eleman üzerinde sağdan Sola tek tek olmak üzere çalıştırır ve tek bir değer oluşturarak, oluşturduğu değeri geriye döndürür.
+      // 1.Parameter    : Dizi içerisinde mevcut değer öncesindeki değerlerin toplamı / birleşimi
+      // 2.Parameter    : her işlemde elde edilen dizi elemanı
+      // 3.Parameter    : her işlemde elde edilen dizi elemanının indis / index değeri
+      // 4.Parameter    : her tekrarda diziyi tutan değişkenin referansı
+
+      function deneme1(deger, eleman, sira, degisken) {
+        return deger + eleman;
+      }
+
+      var sayilar = new Array(23, 43, 12, 7, 45, 33);
+      document.write(sayilar + "<br/>");
+
+      var islem = sayilar.reduceRight(deneme1);
+      document.write(islem + "<br/><br/><br/><br/><br/><br/>");
+
+      function deneme2(deger, eleman, sira, degisken) {
+        return deger + eleman;
+      }
+      var harfler = new Array("A", "B", "C", "D", "E", "F", "G");
+      document.write(harfler + "<br/>");
+
+      var islem = harfler.reduceRight(deneme2);
+      document.write(islem + "<br/>");
+    </script>
+  </body>
+</html>

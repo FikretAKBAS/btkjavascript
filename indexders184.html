@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript" language="javascript">
+      // findIndex() Array Method
+
+      // 1. Parameter: her işlemde elde edilen dizi elemanı
+      // 2. Parameter: her işlemde elde edilen dizi elemanının indis / index değeri
+      // 3. Parameter: her tekrar işlemde diziyi tutan değişkenin referansı
+
+      function deneme1(eleman, sira, referans) {
+        return eleman == "Sehpa";
+      }
+
+      var esyalarim = new Array(
+        "Vitrin",
+        "Vazo",
+        "Sehpa",
+        "Dolap",
+        "Koltuk",
+        "Masa"
+      );
+
+      // eleman indisi 7 olan sayıyı bulduk
+
+      document.write(esyalarim + "<br/>");
+
+      var sonuclar = esyalarim.findIndex(deneme1);
+      document.write(sonuclar + "<br/>");
+
+      // Second Example
+      function deneme(eleman, sira, referans) {
+        return eleman == 7;
+      }
+
+      var rakamlar = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+      // eleman indisi 7 olan sayıyı bulduk
+
+      document.write(rakamlar + "<br/>");
+
+      var sonuclar = rakamlar.findIndex(deneme);
+      document.write(sonuclar);
+    </script>
+  </body>
+</html>
