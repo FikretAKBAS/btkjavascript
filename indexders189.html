@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript" language="javascript">
+      // forEach() :Kendisine Parametre Olarak Verilen Fonksiyonu Dizideki Her Eleman Üzerine Tek Tek Çalıştırır ve Geriye Herhangi Bir Değer Döndürmez. Fakat İstenirse İlgili Değerlere Ulaşılabilir.
+      /*
+      1. Parameter  : Her İşlemde Elde Edilen Dizi Elemanı
+      2. Parameter  : Her İşlemde Elde Edilen Dizi Elemanının İndis - İndex Değeri
+      3. Parameter  : Tekrarlama İşlemi İçim Dizinin Atandığı Değişkenin Referansı
+      */
+
+      function islem(
+        arrayMember,
+        arrayMemberIndex,
+        arrayMemberVariableReferance
+      ) {
+        result = result + "Çalıştı: " + arrayMember + "<br/>";
+      }
+      var result = 0;
+      var numbers = new Array(2, 4, 6, 8, 10, 12, 14, 16, 18, 20);
+      document.write(numbers + "<br/>");
+
+      numbers.forEach(islem);
+      document.write(result);
+
+      /*Second Example*/
+      function islem1(
+        arrayMember,
+        arrayMemberIndex,
+        arrayMemberVariableReferance
+      ) {
+        result1 += arrayMember;
+      }
+      var result1 = 0;
+      var numbers1 = new Array(2, 4, 6, 8, 10, 12, 14, 16, 18, 20);
+      document.write(numbers1 + "<br/>");
+
+      numbers1.forEach(islem1);
+      document.write(result1);
+    </script>
+  </body>
+</html>

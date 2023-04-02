@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript" language="javascript">
+      // sort() : Dizi İçeriğinin Sıralanması İçin Kullanılır. Bu Metod Unicode Olarak Çalışır.
+
+      // Bu Kısım Unicode Olarak Çalışıyor ve özel karakterleri en son atıyor.
+      var isimler = new Array("Volkan", "Ümit", "Onur", "Serkan", "Hakan");
+      document.write(isimler + "<br/>");
+      isimler.sort();
+      document.write(isimler + "<br/><br/><br/><br/><br/><br/><br/>");
+
+      // öRNEK 2
+      var sayilar = new Array(2, 12, 100, 44, 53, 8.55, 75, 10.12);
+      document.write(sayilar + "<br/>");
+      sayilar.sort();
+      document.write(sayilar + "<br/><br/><br/><br/><br/><br/><br/>");
+
+      // Bu Kısımda Prototype Nesnesine Etki Ederek Metodun Doğru Sıralama Yapmasını Sağlayacağız.
+
+      var icerik = new Array(
+        100,
+        "Volkan",
+        2,
+        12,
+        "Ümit",
+        "+",
+        "Onur",
+        53,
+        44,
+        "!",
+        8.55,
+        "Serkan",
+        "?",
+        "Hakan",
+        75,
+        "*",
+        10.12
+      );
+      document.write(icerik + "<br/>");
+      icerik.sort();
+      document.write(
+        icerik + "<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>"
+      );
+      <!---->
+      /*sortFromSmallToBig*/
+      function sortFromSmallToBig(first, second) {
+        // if you write a-b; that's mean sort number from small to big
+        return first - second;
+      }
+      //   function sortFromBigToSmall(a, b) {
+      //     // if you write b-a; that's mean sort number from big to small
+      //     return b - a;
+      //   }
+      var sayilar1 = new Array(2, 12, 100, 44, 53, 8.55, 75, 10.12);
+      document.write(sayilar1 + "<br/>");
+      sayilar1.sort(sortFromSmallToBig);
+      document.write(sayilar1 + "<br/><br/><br/><br/><br/><br/><br/>");
+
+      /*sortFromBigToSmall*/
+      function sortFromBigToSmall(first, second) {
+        // if you write b-a; that's mean sort number from big to small
+        return second - first;
+      }
+      var sayilar2 = new Array(2, 12, 100, 44, 53, 8.55, 75, 10.12);
+      document.write(sayilar2 + "<br/>");
+      sayilar2.sort(sortFromBigToSmall);
+      document.write(sayilar2 + "<br/><br/><br/><br/><br/><br/><br/>");
+
+      /*sortFromAToZ*/
+      function sortFromAToZ(firstLetter, secondLetter) {
+        var turkishAlphabetLetters =
+          "AaBbCcDdEeFfGgHhIıİiJjKkLlMmNnOoÖöPpQqRrSsŞşTtUuÜüVvWwXxYyZz";
+        if (firstLetter.length === 0 || secondLetter.length === 0) {
+          return firstLetter - secondLetter;
+        } else {
+          var first = turkishAlphabetLetters.indexOf(firstLetter[0]);
+          var second = turkishAlphabetLetters.indexOf(secondLetter[0]);
+          if (first !== second) {
+            return first - second;
+          } else {
+            return sortFromAToZ(firstLetter.slice(1), secondLetter.slice(1));
+          }
+        }
+      }
+      var names = new Array(
+        "Volkan",
+        "Ümit",
+        "Onur",
+        "Serkan",
+        "Hakan",
+        "Çağatay",
+        "Şinasi",
+        "Zamir"
+      );
+      document.write(names + "<br/>");
+      names.sort(sortFromAToZ);
+      document.write(names + "<br/><br/><br/><br/><br/><br/><br/>");
+
+      /*sortFromZToA*/
+      function sortFromZToA(firstLetter, secondLetter) {
+        var turkishAlphabetLetters =
+          "AaBbCcDdEeFfGgHhIıİiJjKkLlMmNnOoÖöPpQqRrSsŞşTtUuÜüVvWwXxYyZz";
+        if (firstLetter.length === 0 || secondLetter.length === 0) {
+          return secondLetter - firstLetter;
+        } else {
+          var first = turkishAlphabetLetters.indexOf(firstLetter[0]);
+          var second = turkishAlphabetLetters.indexOf(secondLetter[0]);
+          if (first !== second) {
+            return second - first;
+          } else {
+            return sortFromZToA(firstLetter.slice(1), secondLetter.slice(1));
+          }
+        }
+      }
+      var names1 = new Array(
+        "Volkan",
+        "Ümit",
+        "Onur",
+        "Serkan",
+        "Hakan",
+        "Çağatay",
+        "Şinasi",
+        "Zamir"
+      );
+      document.write(names1 + "<br/>");
+      names1.sort(sortFromZToA);
+      document.write(names1 + "<br/><br/><br/><br/><br/><br/><br/>");
+
+      /*sortFromZToA*/
+    </script>
+  </body>
+</html>

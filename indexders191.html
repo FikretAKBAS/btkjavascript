@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript" language="javascript">
+      // every()     : Kendisine Parametre olarak belirtilen fonksiyon false değeri döndürene kadar dizi elemanları üzerinde sıra ile gezinilmesini sağlar.
+      /*
+      1. Parameter  : Her İşlemde Elde Edilen Dizi Elemanı
+      2. Parameter  : Her İşlemde Elde Edilen Dizi Elemanının İndis - İndex Değeri
+      3. Parameter  : Tekrarlama İşlemi İçim Dizinin Atandığı Değişkenin Referansı
+      */
+      /*Example For Numbers*/
+      function everyMethodFunc(
+        arrayMember,
+        arrayMemberIndex,
+        arrayMemberVariableReferance
+      ) {
+        everyMethodFuncResult = arrayMember;
+        return arrayMember % 5 === 0;
+      }
+
+      var everyMethodFuncResult = "";
+
+      var numbers1 = new Array(
+        5,
+        77,
+        10,
+        20,
+        30,
+        50,
+        140,
+        380,
+        420,
+        220,
+        343,
+        70,
+        400
+      );
+      document.write(numbers1 + "<br/><br/><br/><br/><br/><br/><br/>");
+      numbers1.every(everyMethodFunc);
+      document.write(
+        everyMethodFuncResult + "<br/><br/><br/><br/><br/><br/><br/>"
+      );
+
+      /*Example For String*/
+      function everyMethodFunc1(
+        arrayMember,
+        arrayMemberIndex,
+        arrayMemberVariableReferance
+      ) {
+        everyMethodFuncResult1 = arrayMember;
+        return arrayMember.length <= 5;
+      }
+      var everyMethodFuncResult1 = "";
+
+      var ornek = new Array("Siyah", "Beyaz", "Yeşil", "Gri", "Turuncu");
+      document.write(ornek + "<br/>");
+      ornek.every(everyMethodFunc1);
+      document.write(everyMethodFuncResult1 + "<br/>");
+    </script>
+  </body>
+</html>

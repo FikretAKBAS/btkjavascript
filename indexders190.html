@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript" language="javascript">
+      // some()     : Kendisine Parametre olarak belirtilen fonksiyon true değeri döndürene kadar dizi elemanları üzerinde sıra ile gezinilmesini sağlar.
+      /*
+      1. Parameter  : Her İşlemde Elde Edilen Dizi Elemanı
+      2. Parameter  : Her İşlemde Elde Edilen Dizi Elemanının İndis - İndex Değeri
+      3. Parameter  : Tekrarlama İşlemi İçim Dizinin Atandığı Değişkenin Referansı
+      */
+      /*Example For Numbers*/
+      function someMethodOfArray1(
+        arrayMember,
+        arrayMemberIndex,
+        arrayMemberVariableReferance
+      ) {
+        result1 = arrayMember;
+        return arrayMember % 3 === 0;
+      }
+
+      var result1 = 0;
+
+      var numbers1 = new Array(16, 23, 65, 32, 88, 33, 19);
+      document.write(numbers1 + "<br/>");
+
+      numbers1.some(someMethodOfArray1);
+      document.write(result1 + "<br/><br/><br/><br/><br/><br/><br/><br/>");
+
+      /*Example For Strings*/
+      function someMethodOfArray(
+        arrayMember,
+        arrayMemberIndex,
+        arrayMemberVariableReferance
+      ) {
+        result = arrayMemberIndex;
+        return arrayMemberIndex == "Masa";
+      }
+
+      var result = "";
+
+      var furniture = new Array(
+        "Masa",
+        "Sandalye",
+        "Vitrin",
+        "Konsol",
+        "Sehpa",
+        "Masa",
+        "Koltuk"
+      );
+      document.write(furniture + "<br/>");
+
+      furniture.some(someMethodOfArray);
+      document.write(result + "<br/>");
+    </script>
+  </body>
+</html>
