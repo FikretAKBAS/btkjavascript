@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript" language="javascript">
+      // shuffle() : Dizinin her elemanı üzerinde çalışarak tüm elemanları karıştırarak yeni bir dizi oluşturur ve oluşturduğu diziyi geriye döndürür.
+
+      Array.prototype.shuffle = function () {
+        var memberCount = this.length;
+
+        while (--memberCount > 0) {
+          var randomNumber = Math.floor(Math.random() * (memberCount + 1));
+          var temporalValue = this[randomNumber];
+          this[randomNumber] = this[memberCount];
+          this[memberCount] = temporalValue;
+          return this;
+        }
+      };
+
+      var contents = new Array(
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "+",
+        "-",
+        "*",
+        "a",
+        "b",
+        "c"
+      );
+      document.write(contents + "<br/>");
+
+      var mixingContents = contents.shuffle();
+      document.write(mixingContents + "<br/>");
+    </script>
+  </body>
+</html>

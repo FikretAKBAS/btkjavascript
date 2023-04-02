@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript" language="javascript">
+      // avarage() : Number veri türü içerikli dizinin her elemanı üzerinde tek tek olmak üzere çalışrı ve tüm elemanların ortalamasını bularak, bulduğu değeri geriye döner.
+
+      Array.prototype.avarage = function () {
+        var islem = 0;
+        for (var baslangic = 0; baslangic < this.length; baslangic++) {
+          islem += this[baslangic];
+        }
+        var results = islem / this.length;
+        return results;
+      };
+
+      var numbers = new Array(10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 150, 10);
+      document.write(numbers + "<br/>");
+
+      var avarageOfNumbers = numbers.avarage();
+      document.write(avarageOfNumbers + "<br/>");
+    </script>
+  </body>
+</html>

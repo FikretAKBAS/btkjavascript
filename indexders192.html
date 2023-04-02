@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript" language="javascript">
+      // filter() : Kendisine Parametre Olarak Verilen Fonksiyonu Her Eleman Üzerinde Çalışır ve Daha Sonra True Değerini Oluşturan Değerlerini Kopyalayarak Yeni Bir Dizi Oluşturur ve Geriye Döndürür.
+
+      /*
+      1. Parameter  : Her İşlemde Elde Edilen Dizi Elemanı
+      2. Parameter  : Her İşlemde Elde Edilen Dizi Elemanının İndis - İndex Değeri
+      3. Parameter  : Tekrarlama İşlemi İçim Dizinin Atandığı Değişkenin Referansı
+      */
+
+      /*Example For Single Numbers*/
+
+      function findSingleNumbers(
+        arrayMember,
+        arrayMemberIndex,
+        arrayMemberVariableReferance
+      ) {
+        return arrayMember % 2 !== 0;
+      }
+
+      var numbers1 = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+      document.write(numbers1 + "<br/>");
+
+      var singleNumbers = numbers1.filter(findSingleNumbers);
+      document.write(
+        singleNumbers + "<br/><br/><br/><br/><br/><br/><br/><br/><br/>"
+      );
+
+      /*Example For Even Numbers*/
+
+      function findEvenNumbers(
+        arrayMember,
+        arrayMemberIndex,
+        arrayMemberVariableReferance
+      ) {
+        return arrayMember % 2 == 0;
+      }
+
+      var rakamlar = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+      document.write(rakamlar + "<br/>");
+
+      var evenNumbers = rakamlar.filter(findEvenNumbers);
+      document.write(evenNumbers + "<br/><br/><br/><br/><br/><br/><br/>");
+
+      /*Example For Strings*/
+
+      function findStringValues(
+        arrayMember,
+        arrayMemberIndex,
+        arrayMemberVariableReferance
+      ) {
+        return arrayMember.length < 8;
+      }
+
+      var countries = new Array(
+        "Türkiye",
+        "Almanya",
+        "İngiltere",
+        "Amerika",
+        "Tunus",
+        "Yunanistan",
+        "Bulgaristan",
+        "Kenya",
+        "Kamerun"
+      );
+      document.write(countries + "<br/>");
+
+      var findCountry = countries.filter(findStringValues);
+      document.write(findCountry + "<br/>");
+    </script>
+  </body>
+</html>

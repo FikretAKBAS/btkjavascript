@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript" language="javascript">
+      // map() : Kendisine Parametre Olarak Verilen Fonksiyonu Dizideki Her Eleman Üzerinde Çalışır. Fonksiyonun Her Eleman İçin Geriye Döndürdüğü Değerler Üzerinden Yeni Bir Dizi Oluşturur ve Geriye Döndürür.
+
+      /*
+      1. Parameter  : Her İşlemde Elde Edilen Dizi Elemanı
+      2. Parameter  : Her İşlemde Elde Edilen Dizi Elemanının İndis - İndex Değeri
+      3. Parameter  : Tekrarlama İşlemi İçim Dizinin Atandığı Değişkenin Referansı
+      */
+
+      function mapExampleFunction(
+        arrayMember,
+        arrayMemberIndex,
+        arrayMemberVariableReferance
+      ) {
+        var multiplication = arrayMember + 100;
+        return multiplication;
+      }
+      var numbers = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+
+      document.write(numbers + "<br/><br/><br/><br/><br/><br/><br/>");
+
+      var newArrayMembers = numbers.map(mapExampleFunction);
+      document.write(
+        newArrayMembers + "<br/><br/><br/><br/><br/><br/><br/><br/>"
+      );
+      function mapExampleFunction1(
+        arrayMember,
+        arrayMemberIndex,
+        arrayMemberVariableReferance
+      ) {
+        var sayHello = "Merhaba " + arrayMember;
+        return sayHello;
+      }
+
+      var names = new Array("Volkan", "Hakan", "Onur", "Serkan");
+      document.write(names + "<br/><br/><br/><br/><br/><br/><br/>");
+
+      var newArrayMembers = names.map(mapExampleFunction1);
+      document.write(newArrayMembers + "<br/><br/><br/><br/><br/><br/><br/>");
+    </script>
+  </body>
+</html>
